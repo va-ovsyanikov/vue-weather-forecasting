@@ -93,7 +93,7 @@ interface ICity {
   city_user?: boolean
 }
 const fetchCity = async (name: string): Promise<ICity> => {
-  const response = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${API_KEY}`);
+  const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${API_KEY}`);
   const obj: ICity = {
     id: response.data.id,
     name: response.data.name,
@@ -111,7 +111,7 @@ const fetchCity = async (name: string): Promise<ICity> => {
 }
 
 const userCity = async () => {
-  const response = await axios.get('http://api.sypexgeo.net')
+  const response = await axios.get('https://api.sypexgeo.net')
   const name: string = response.data.city.name_en
   return name
 }
