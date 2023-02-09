@@ -13,6 +13,6 @@ import VueCompositionAPI from '@vue/composition-api'
 Vue.config.productionTip = false
 Vue.use(VueCompositionAPI)
 new Vue({
-  router,
-  render: h => h(App)
+    router,
+    render: h => h(App),
 }).$mount('#app')
